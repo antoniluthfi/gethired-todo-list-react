@@ -58,6 +58,7 @@ export default function TodoCard({
           style={{ backgroundColor: convertPriorityToColor(priority) }}
         />
         <p
+          data-cy="todo-item-title"
           className="todo-title"
           style={{ textDecoration: isChecked ? "line-through" : "none" }}
         >

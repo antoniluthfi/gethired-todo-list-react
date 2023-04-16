@@ -70,7 +70,7 @@
 
                 @include desktop-screen {
                     width: 767px;
-                    height: 490px;    
+                    height: 490px;
                 }
             }
         }
@@ -81,6 +81,10 @@
             gap: 20px;
             margin-top: 37px;
             margin-bottom: 30px;
+
+            @include tablet-screen {
+                grid-template-columns: repeat(3, 1fr);
+            }
 
             @include desktop-screen {
                 grid-template-columns: repeat(4, 1fr);
