@@ -20,11 +20,12 @@
         height: 234px;
     }
 
-    h1 {
+    &__title {
         font-weight: 700;
         font-size: 18px;
         line-height: 27px;
         color: #111111;
+        margin: 0;
         cursor: pointer;
     }
 

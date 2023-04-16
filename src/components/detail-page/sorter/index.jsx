@@ -1,5 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
-import { ArrowSortIcon, SortAZIcon, SortNewestIcon, SortOldestIcon, SortUnfinishedIcon, SortZAIcon } from "../../../assets";
+import {
+  ArrowSortIcon,
+  SortAZIcon,
+  SortNewestIcon,
+  SortOldestIcon,
+  SortUnfinishedIcon,
+  SortZAIcon,
+} from "../../../assets";
 
 export default function Sorter({ onChange }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,23 +15,23 @@ export default function Sorter({ onChange }) {
   const options = [
     {
       label: "Terbaru",
-      image: SortNewestIcon
+      image: SortNewestIcon,
     },
     {
       label: "Terlama",
-      image: SortOldestIcon
+      image: SortOldestIcon,
     },
     {
       label: "A-Z",
-      image: SortAZIcon
+      image: SortAZIcon,
     },
     {
       label: "Z-A",
-      image: SortZAIcon
+      image: SortZAIcon,
     },
     {
       label: "Belum Selesai",
-      image: SortUnfinishedIcon
+      image: SortUnfinishedIcon,
     },
   ];
 
@@ -50,11 +57,10 @@ export default function Sorter({ onChange }) {
   return (
     <div className="sorter" ref={ref}>
       <button
-        data-cy="todo-sort-button"
         className="sorter__button"
         onClick={() => setIsOpen((prev) => !prev)}
       >
-        <img src={ArrowSortIcon} alt="arrow-sort" />
+        <img src={ArrowSortIcon} alt="arrow-sort" data-cy="todo-sort-button" />
       </button>
 
       <ul

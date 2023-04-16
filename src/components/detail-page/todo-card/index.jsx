@@ -41,7 +41,6 @@ export default function TodoCard({
     <div className="todo-card">
       <div className="todo-card__section1">
         <button
-          data-cy="todo-item-checkbox"
           className="todo-checkbox"
           onClick={() => {
             updateTodoById({ id, is_active: Number(isChecked) });
@@ -51,6 +50,7 @@ export default function TodoCard({
           <img
             src={isChecked ? TodoItemChecked : TodoItemUnchecked}
             alt="todo-checkbox"
+            data-cy="todo-item-checkbox"
           />
         </button>
         <div
@@ -69,12 +69,12 @@ export default function TodoCard({
       </div>
 
       <div className="todo-card__section2">
-        <button
-          data-cy="todo-item-delete-button"
-          className="todo-delete-button"
-          onClick={onOpenDeleteModal}
-        >
-          <img src={ActivityItemDeleteButtonIcon} alt="todo-delete-button" />
+        <button className="todo-delete-button" onClick={onOpenDeleteModal}>
+          <img
+            src={ActivityItemDeleteButtonIcon}
+            alt="todo-delete-button"
+            data-cy="todo-item-delete-button"
+          />
         </button>
       </div>
     </div>
