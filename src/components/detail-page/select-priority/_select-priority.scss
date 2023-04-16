@@ -80,33 +80,27 @@
             width: inherit;
         }
 
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
+        .option-list {
+            padding: 19px 17px;
+            background: #FFFFFF;
+            border-bottom: 1px solid #E5E5E5;
+            justify-self: center;
+            display: flex;
+            align-items: center;
+            gap: 19px;
 
-            li {
-                padding: 19px 17px;
-                background: #FFFFFF;
-                border-bottom: 1px solid #E5E5E5;
-                justify-self: center;
-                display: flex;
-                align-items: center;
-                gap: 19px;
+            &:hover {
+                background: #E5E5E5;
+            }
 
-                &:hover {
-                    background: #E5E5E5;
-                }
+            .circle {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
 
-                .circle {
-                    width: 8px;
-                    height: 8px;
-                    border-radius: 50%;
-
-                    @include desktop-screen {
-                        width: 14px;
-                        height: 14px;
-                    }
+                @include desktop-screen {
+                    width: 14px;
+                    height: 14px;
                 }
             }
         }

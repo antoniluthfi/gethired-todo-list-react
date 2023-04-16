@@ -47,7 +47,7 @@ export default function SelectPriority({ options, defaultValue, onSelect }) {
         style={{ backgroundColor: isOpen ? "#E5E5E5" : "#FFFFFF" }}
         onClick={toggleDropdown}
       >
-        <div data-cy="modal-add-priority-item">
+        <div>
           {selectedColor && (
             <div
               className="circle"
@@ -67,17 +67,17 @@ export default function SelectPriority({ options, defaultValue, onSelect }) {
           isOpen ? "options-open" : "options-hide"
         }`}
       >
-        <ul>
-          {options.map((option) => (
-            <li key={option.value} onClick={() => handleOptionClick(option)}>
-              <div
-                className="circle"
-                style={{ backgroundColor: option.color }}
-              />{" "}
-              {option.label}
-            </li>
-          ))}
-        </ul>
+        {options.map((option) => (
+          <div
+            key={option.value}
+            data-cy="modal-add-priority-item"
+            className="option-list"
+            onClick={() => handleOptionClick(option)}
+          >
+            <div className="circle" style={{ backgroundColor: option.color }} />{" "}
+            {option.label}
+          </div>
+        ))}
       </div>
     </div>
   );
