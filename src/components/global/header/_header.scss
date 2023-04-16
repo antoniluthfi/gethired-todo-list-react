@@ -1,0 +1,30 @@
+@import "../../../mixins";
+
+header {
+    background-color: #16ABF8;
+    height: 64px;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+    @include desktop-screen {
+        padding-left: 15%;
+        padding-right: 15%;
+        height: 105px;
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+
+        @include desktop-screen {
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+}
