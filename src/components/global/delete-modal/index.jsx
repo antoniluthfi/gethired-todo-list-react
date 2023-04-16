@@ -34,7 +34,7 @@ export default function DeleteModal({
           <span className="text-bold">{highlightText}</span>
         </p>
         {/* for testing purpose */}
-        {isOpen && (
+        {isOpen ? (
           <div className="delete-modal__footer">
             <Button
               dataCy="modal-delete-cancel-button"
@@ -54,7 +54,7 @@ export default function DeleteModal({
               Hapus
             </Button>
           </div>
-        )}
+        ) : null}
       </div>
     </Modal>
   );

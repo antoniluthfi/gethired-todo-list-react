@@ -62,8 +62,12 @@ export default function SelectPriority({ options, defaultValue, onSelect }) {
           alt="chevron"
         />
       </div>
-      {isOpen && (
-        <ul className="select-priority__options">
+      <div
+        className={`select-priority__options ${
+          isOpen ? "options-open" : "options-hide"
+        }`}
+      >
+        <ul>
           {options.map((option) => (
             <li key={option.value} onClick={() => handleOptionClick(option)}>
               <div
@@ -74,7 +78,7 @@ export default function SelectPriority({ options, defaultValue, onSelect }) {
             </li>
           ))}
         </ul>
-      )}
+      </div>
     </div>
   );
 }
