@@ -25,7 +25,7 @@ export default function Contents() {
       <div className="home-contents__main">
         {isLoading ? (
           <Loading />
-        ) : !data.length ? (
+        ) : !data?.length ? (
           <div className="empty-list">
             <img
               src={ActivityEmptyState}

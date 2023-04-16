@@ -13,6 +13,9 @@ export default function SelectPriority({ options, defaultValue, onSelect }) {
       const selectedOption = options.find((opt) => opt.value === defaultValue);
       setSelectedLabel(selectedOption.label);
       setSelectedColor(selectedOption.color);
+    } else {
+      setSelectedLabel("Pilih priority");
+      setSelectedColor("");
     }
   }, [defaultValue]);
 

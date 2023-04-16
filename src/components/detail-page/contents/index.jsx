@@ -90,7 +90,7 @@ export default function Contents() {
           />
         </div>
         <div className="section2">
-          {data.length ? <Sorter onChange={setSortValue} /> : null}
+          {data?.length ? <Sorter onChange={setSortValue} /> : null}
           <Button
             dataCy="todo-add-button"
             onClick={() => setShowAddTodoModal(true)}
@@ -103,7 +103,7 @@ export default function Contents() {
       <div className="detail-contents__main">
         {isLoading ? (
           <Loading />
-        ) : !data.length ? (
+        ) : !data?.length ? (
           <div className="empty-list" data-cy="todo-empty-state">
             <img
               src={TodoEmptyState}
