@@ -1,0 +1,24 @@
+@import "./components/global/header/header";
+@import "./components/home-page/contents/contents";
+@import "./components/home-page/activity-card/activity-card";
+@import "./components/global/modal/modal";
+@import "./components/global/delete-modal/delete-modal";
+@import "./components/global/button/button";
+@import "./components/global/alert/alert";
+@import "./components/global/loading/loading";
+@import "./components/detail-page/contents/contents";
+@import "./components/detail-page/add-todo-modal/add-todo-modal";
+@import "./components/detail-page/select-priority/select-priority";
+@import "./components/detail-page/todo-card/todo-card";
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    background: #f6f5f5;
+}
