@@ -75,19 +75,7 @@ export default function AddTodoModal({
           />
         </div>
 
-        <div
-          className="add-todo-modal__footer"
-          style={
-            // add this style for testing purposes only
-            values.priority
-              ? {
-                  position: "absolute",
-                  width: "90%",
-                  zIndex: 1000,
-                }
-              : {}
-          }
-        >
+        <div className="add-todo-modal__footer">
           <Button
             dataCy="modal-add-save-button"
             onClick={() => {

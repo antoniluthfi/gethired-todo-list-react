@@ -59,17 +59,19 @@
         border-top: 1px solid #E5E5E5;
         max-height: 200px;
         overflow-y: scroll;
-        transition: .3s all ease-in-out;
+        transition: .2s all ease-in-out;
 
         position: absolute;
         width: 85%;
-
+        
         &.options-open {
+            z-index: 1000;
             opacity: 1;
             transform: translateY(2%);
         }
 
         &.options-hide {
+            z-index: 0;
             opacity: 0;
             transform: translateY(0);
         }
