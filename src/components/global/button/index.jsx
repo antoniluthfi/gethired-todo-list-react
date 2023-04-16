@@ -5,15 +5,20 @@ export default function Button({
   textColor = "#ffffff",
   backgroundColor = "#16abf8",
   backgroundColorHover = "#1792cf",
+  disabledColor = "#5ac4f9",
   onClick,
   dataCy,
-  disabled
+  disabled,
 }) {
   const [bgColor, setBgColor] = useState("");
 
   useEffect(() => {
-    if (backgroundColor) {
+    if (backgroundColor && !disabled) {
       setBgColor(backgroundColor);
+    } else if (backgroundColor && disabled) {
+      setBgColor(disabledColor);
+    } else {
+      setBgColor("");
     }
   }, [backgroundColor]);
 
@@ -32,6 +37,7 @@ export default function Button({
       style={{
         color: textColor,
         backgroundColor: bgColor,
+        cursor: disabled ? "default" : "pointer",
       }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}

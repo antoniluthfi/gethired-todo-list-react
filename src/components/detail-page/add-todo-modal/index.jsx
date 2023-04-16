@@ -75,21 +75,23 @@ export default function AddTodoModal({
           />
         </div>
 
-        <div className="add-todo-modal__footer">
-          <Button
-            dataCy="modal-add-save-button"
-            onClick={() => {
-              onSubmit({ activity_group_id, ...values });
-              setValues({
-                title: "",
-                priority: "",
-              });
-            }}
-            disabled={!values.priority || !values.title}
-          >
-            Simpan
-          </Button>
-        </div>
+        {isOpen ? (
+          <div className="add-todo-modal__footer">
+            <Button
+              dataCy="modal-add-save-button"
+              onClick={() => {
+                onSubmit({ activity_group_id, ...values });
+                setValues({
+                  title: "",
+                  priority: "",
+                });
+              }}
+              disabled={!values.priority || !values.title}
+            >
+              Simpan
+            </Button>
+          </div>
+        ) : null}
       </div>
     </Modal>
   );
