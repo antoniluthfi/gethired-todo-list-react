@@ -11,23 +11,23 @@ export default function ActivityCard({ id, title, createdAt, onBeforeDelete }) {
 
   return (
     <div className="activity-card" data-cy="activity-item">
-      <h1
+      <h4
         data-cy="activity-item-title"
         onClick={() => {
           navigate(`/detail/${id}`);
         }}
       >
         {title}
-      </h1>
+      </h4>
 
       <div className="activity-card__footer">
-        <p data-cy="activity-item-date">
+        <span data-cy="activity-item-date">
           {createdAt
             ? format(new Date(createdAt), "d MMMM yyyy", {
                 locale: localeId,
               })
             : ""}
-        </p>
+        </span>
         <button
           data-cy="activity-item-delete-button"
           onClick={() => {

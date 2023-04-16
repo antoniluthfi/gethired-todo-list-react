@@ -52,6 +52,7 @@ export default function EditableTitle({ value, onSave }) {
       )}
 
       <img
+        data-cy="todo-title-edit-button"
         src={TodoEditButtonIcon}
         alt="edit-button"
         className="edit-button-icon"

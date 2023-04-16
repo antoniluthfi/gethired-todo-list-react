@@ -76,7 +76,7 @@ export default function Contents() {
   return (
     <main className="detail-contents">
       <div className="detail-contents__header">
-        <div className="section1" data-cy="todo-title">
+        <div className="section1">
           <Link to="/">
             <img
               src={BackButtonIcon}

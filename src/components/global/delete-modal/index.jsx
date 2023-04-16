@@ -10,7 +10,7 @@ export default function DeleteModal({
   highlightText,
 }) {
   return (
-    <Modal isOpen={isOpen}>
+    <Modal dataCy="modal-delete" isOpen={isOpen}>
       <div className="delete-modal">
         <img src={ModalDeleteIcon} alt="modal-delete-icon" />
         <p>
