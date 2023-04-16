@@ -70,7 +70,7 @@ export default function TodoCard({
 
       <div className="todo-card__section2">
         <button
-          data-cy="item-delete-button"
+          data-cy="todo-item-delete-button"
           className="todo-delete-button"
           onClick={onOpenDeleteModal}
         >
