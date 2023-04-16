@@ -42,7 +42,11 @@ export default function EditableTitle({ value, onSave }) {
           }}
         />
       ) : (
-        <h1 className="readonly-title" onClick={() => setEditMode(true)}>
+        <h1
+          data-cy="todo-title"
+          className="readonly-title"
+          onClick={() => setEditMode(true)}
+        >
           {title}
         </h1>
       )}

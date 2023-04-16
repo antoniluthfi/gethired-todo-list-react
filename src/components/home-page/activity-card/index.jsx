@@ -10,7 +10,7 @@ export default function ActivityCard({ id, title, createdAt, onBeforeDelete }) {
   const navigate = useNavigate();
 
   return (
-    <div className="activity-card">
+    <div className="activity-card" data-cy="activity-item">
       <h1
         onClick={() => {
           navigate(`/detail/${id}`);
@@ -28,6 +28,7 @@ export default function ActivityCard({ id, title, createdAt, onBeforeDelete }) {
             : ""}
         </p>
         <button
+          data-cy="activity-item-delete-button"
           onClick={() => {
             setShowDeleteModal(true);
             onBeforeDelete();

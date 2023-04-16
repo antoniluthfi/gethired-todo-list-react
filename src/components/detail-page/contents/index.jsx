@@ -91,7 +91,10 @@ export default function Contents() {
         </div>
         <div className="section2">
           {data.length ? <Sorter onChange={setSortValue} /> : null}
-          <Button onClick={() => setShowAddTodoModal(true)}>
+          <Button
+            dataCy="todo-add-button"
+            onClick={() => setShowAddTodoModal(true)}
+          >
             <span className="plus-icon">+</span> Tambah
           </Button>
         </div>

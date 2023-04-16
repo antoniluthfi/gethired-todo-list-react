@@ -16,8 +16,8 @@ export default function Contents() {
   return (
     <main className="home-contents">
       <div className="home-contents__header">
-        <h1>Activity</h1>
-        <Button onClick={createActivity}>
+        <h1 data-cy="activity-title">Activity</h1>
+        <Button dataCy="activity-add-button" onClick={createActivity}>
           <span className="plus-icon">+</span> Tambah
         </Button>
       </div>

@@ -49,6 +49,7 @@ export default function AddTodoModal({
         <div className="add-todo-modal__content">
           <label htmlFor="item-list-name-input">NAMA LIST ITEM</label>
           <input
+            data-cy="modal-add-name-input"
             id="item-list-name-input"
             type="text"
             placeholder="Tambahkan nama list item"
@@ -76,6 +77,7 @@ export default function AddTodoModal({
 
         <div className="add-todo-modal__footer">
           <Button
+            dataCy="modal-add-save-button"
             onClick={() => {
               onSubmit({ activity_group_id, ...values });
               setValues({

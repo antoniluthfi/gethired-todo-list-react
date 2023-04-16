@@ -49,17 +49,27 @@ export default function SelectPriority({ options, defaultValue, onSelect }) {
       >
         <div>
           {selectedColor && (
-            <div className="circle" style={{ backgroundColor: selectedColor }} />
+            <div
+              className="circle"
+              style={{ backgroundColor: selectedColor }}
+            />
           )}
           {selectedLabel}
         </div>
-        <img src={isOpen ? ChevronUpIcon : ChevronDownIcon} alt="chevron" />
+        <img
+          data-cy="modal-add-priority-dropdown"
+          src={isOpen ? ChevronUpIcon : ChevronDownIcon}
+          alt="chevron"
+        />
       </div>
       {isOpen && (
         <ul className="select-priority__options">
           {options.map((option) => (
             <li key={option.value} onClick={() => handleOptionClick(option)}>
-              <div className="circle" style={{ backgroundColor: option.color }} />{" "}
+              <div
+                className="circle"
+                style={{ backgroundColor: option.color }}
+              />{" "}
               {option.label}
             </li>
           ))}

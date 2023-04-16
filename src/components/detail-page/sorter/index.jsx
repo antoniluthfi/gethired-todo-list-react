@@ -50,6 +50,7 @@ export default function Sorter({ onChange }) {
   return (
     <div className="sorter" ref={ref}>
       <button
+        data-cy="todo-sort-button"
         className="sorter__button"
         onClick={() => setIsOpen((prev) => !prev)}
       >
@@ -63,6 +64,7 @@ export default function Sorter({ onChange }) {
       >
         {options.map((option) => (
           <li
+            data-cy="sort-selection"
             key={option.label}
             onClick={() => handleOptionClick(option.label)}
           >
