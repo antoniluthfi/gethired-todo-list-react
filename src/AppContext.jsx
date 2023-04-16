@@ -17,7 +17,7 @@ export default function AppProvider({ children }) {
           show: false,
           message: "",
         });
-      }, 2500);
+      }, 1500);
     }
   }, [alertConfig.show]);
 

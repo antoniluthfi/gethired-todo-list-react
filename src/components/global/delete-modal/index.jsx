@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Modal from "../modal";
 import { ModalDeleteIcon } from "../../../assets";
 import Button from "../button";
@@ -9,9 +9,25 @@ export default function DeleteModal({
   onDelete,
   highlightText,
 }) {
+  const ref = useRef();
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        onClose();
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
+
   return (
     <Modal dataCy="modal-delete" isOpen={isOpen}>
-      <div className="delete-modal">
+      <div ref={ref} className="delete-modal">
         <img src={ModalDeleteIcon} alt="modal-delete-icon" />
         <p>
           Apakah anda yakin menghapus activity{" "}

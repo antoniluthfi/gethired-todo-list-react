@@ -14,7 +14,7 @@ export default function Modal({ isOpen, children, dataCy }) {
     }
   }, [isOpen]);
 
-  if (!showModal) return null;
+  // if (!showModal) return null;
 
   return createPortal(
     <div
