@@ -101,10 +101,6 @@
         justify-content: flex-end;
         align-items: center;
         
-        position: absolute;
-        width: 90%;
-        z-index: 1000;
-
         @include desktop-screen {
             padding-left: 40px;
             padding-right: 40px;    

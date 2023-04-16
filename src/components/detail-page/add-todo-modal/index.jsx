@@ -76,7 +76,18 @@ export default function AddTodoModal({
         </div>
 
         {isOpen ? (
-          <div className="add-todo-modal__footer">
+          <div
+            className="add-todo-modal__footer"
+            style={ // add this style for testing purposes only
+              values.priority
+                ? {
+                    position: "absolute",
+                    width: "90%",
+                    zIndex: 1000,
+                  }
+                : {}
+            }
+          >
             <Button
               dataCy="modal-add-save-button"
               onClick={() => {
