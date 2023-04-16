@@ -11,15 +11,16 @@ export default function ActivityCard({ id, title, createdAt, onBeforeDelete }) {
 
   return (
     <div className="activity-card" data-cy="activity-item">
-      <h4
-        data-cy="activity-item-title"
-        className="activity-card__title"
+      <div
+        className="activity-card__body"
         onClick={() => {
           navigate(`/detail/${id}`);
         }}
       >
-        {title}
-      </h4>
+        <h4 data-cy="activity-item-title" className="activity-item-title">
+          {title}
+        </h4>
+      </div>
 
       <div className="activity-card__footer">
         <span data-cy="activity-item-date">
