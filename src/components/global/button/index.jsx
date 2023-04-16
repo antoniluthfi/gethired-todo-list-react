@@ -6,7 +6,8 @@ export default function Button({
   backgroundColor = "#16abf8",
   backgroundColorHover = "#1792cf",
   onClick,
-  dataCy
+  dataCy,
+  disabled
 }) {
   const [bgColor, setBgColor] = useState("");
 
@@ -35,6 +36,7 @@ export default function Button({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={onClick}
+      disabled={disabled}
     >
       {children}
     </button>

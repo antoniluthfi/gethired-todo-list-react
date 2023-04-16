@@ -29,7 +29,7 @@ export default function AddTodoModal({
   }, [isEditMode, defaultValue?.title, defaultValue?.priority]);
 
   return (
-    <Modal isOpen={isOpen}>
+    <Modal isOpen={isOpen} dataCy="modal-add">
       <div className="add-todo-modal">
         <div className="add-todo-modal__header">
           <h1>{isEditMode ? "Ubah" : "Tambah"} List Item</h1>
@@ -85,6 +85,7 @@ export default function AddTodoModal({
                 priority: "",
               });
             }}
+            disabled={!values.priority || !values.title}
           >
             Simpan
           </Button>

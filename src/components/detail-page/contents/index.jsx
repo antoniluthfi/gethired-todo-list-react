@@ -104,7 +104,7 @@ export default function Contents() {
         {isLoading ? (
           <Loading />
         ) : !data.length ? (
-          <div className="empty-list">
+          <div className="empty-list" data-cy="todo-empty-state">
             <img
               src={TodoEmptyState}
               alt="empty-state"

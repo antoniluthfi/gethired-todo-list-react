@@ -47,7 +47,7 @@ export default function SelectPriority({ options, defaultValue, onSelect }) {
         style={{ backgroundColor: isOpen ? "#E5E5E5" : "#FFFFFF" }}
         onClick={toggleDropdown}
       >
-        <div>
+        <div data-cy="modal-add-priority-item">
           {selectedColor && (
             <div
               className="circle"
