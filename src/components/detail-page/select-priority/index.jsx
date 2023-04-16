@@ -65,28 +65,23 @@ export default function SelectPriority({ options, defaultValue, onSelect }) {
           alt="chevron"
         />
       </div>
-      {isOpen ? ( // condition is for testing purpose only
-        <div
-          className={`select-priority__options ${
-            isOpen ? "options-open" : "options-hide"
-          }`}
-        >
-          {options.map((option) => (
-            <div
-              key={option.value}
-              data-cy="modal-add-priority-item"
-              className="option-list"
-              onClick={() => handleOptionClick(option)}
-            >
-              <div
-                className="circle"
-                style={{ backgroundColor: option.color }}
-              />{" "}
-              {option.label}
-            </div>
-          ))}
-        </div>
-      ) : null}
+      <div
+        className={`select-priority__options ${
+          isOpen ? "options-open" : "options-hide"
+        }`}
+      >
+        {options.map((option) => (
+          <div
+            key={option.value}
+            data-cy="modal-add-priority-item"
+            className="option-list"
+            onClick={() => handleOptionClick(option)}
+          >
+            <div className="circle" style={{ backgroundColor: option.color }} />{" "}
+            {option.label}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
