@@ -10,11 +10,11 @@ export default function Modal({ isOpen, children, dataCy }) {
     } else {
       setTimeout(() => {
         setShowModal(false);
-      }, 500);
+      }, 1500);
     }
   }, [isOpen]);
 
-  // if (!showModal) return null;
+  if (!showModal) return null;
 
   return createPortal(
     <div
