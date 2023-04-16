@@ -28,6 +28,7 @@ export default function Contents() {
         ) : !data?.length ? (
           <div className="empty-list">
             <img
+              data-cy="activity-empty-state"
               src={ActivityEmptyState}
               alt="empty-state"
               onClick={createActivity}
