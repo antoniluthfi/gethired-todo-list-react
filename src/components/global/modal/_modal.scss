@@ -24,11 +24,11 @@
         border-radius: 12px;
 
         &.modal-open {
-            animation: modalSlideIn .5s forwards;
+            animation: modalSlideIn .2s forwards;
         }
 
         &.modal-hide {
-            animation: modalSlideOut .5s forwards;
+            animation: modalSlideOut .2s forwards;
         }
 
         @keyframes modalSlideIn {
